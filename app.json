@@ -1,0 +1,17 @@
+{
+  "pages":[
+    "pages/home/home",
+    "pages/index/index",
+    
+    "pages/detail/detail",
+    "pages/logs/logs"
+  ],
+  "window":{
+
+    "backgroundTextStyle":"dark",
+    "navigationBarBackgroundColor": "#00a2ea",
+    "navigationBarTitleText": "知乎日报",
+    "navigationBarTextStyle":"white",
+    "enablePullDownRefresh":true
+  }
+}

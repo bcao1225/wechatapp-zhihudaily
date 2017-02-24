@@ -1,0 +1,18 @@
+
+<import src="../../wxParse/wxParse.wxml"/> 
+<view>
+
+<view class="head-container">
+    <image class="head-image" src="{{imgUrl}}"  mode="aspectFill" />
+    <view class="img-mask"></view>
+    <view class="head-container-title">
+        <text class="title">{{title}}</text>
+        <text class="description">{{image_source}}</text>
+        
+    </view>
+    
+</view>
+
+<template is="wxParse" data="{{wxParseData:html.nodes}}"/>
+<!--{{data.body}}-->
+</view>

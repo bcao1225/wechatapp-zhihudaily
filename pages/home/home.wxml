@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view >
+
+<swiper class="banners" indicator-dots="true" autoplay="{{true}}" interval="{{interval}}" duration="{{duration}}">
+    <block wx:for="{{top_stories}}">
+
+        <swiper-item >
+        <navigator url="../detail/detail?id={{item.id}}" class="banner">
+          <image class="banner-image" src="{{baseUrl}}{{item.image}}"  mode="aspectFill" />
+            
+            <text class="banner-title">{{item.title}}</text>
+
+        </navigator> 
+          
+        </swiper-item>
+
+    </block>
+</swiper>
+
+<view class="news-container">
+    <block wx:for="{{stories}}">
+        <text wx:if="{{item.header}}"  class="sub-title">{{item.header}}</text>
+        <navigator wx:else wx:else url="../detail/detail?id={{item.id}}">
+            <view class="news-item">
+        
+             <text class="news-item-title">{{item.title}}</text>
+             <!--<view class="news-item-right">-->
+                <image class="news-image" src="{{baseUrl}}{{item.images[0]}}" mode="aspectFill"/>
+               <!--</view>-->
+            </view>
+        </navigator>
+    </block>
+    <button wx:if="{{isBtnShow}}" class="load-btn" bindtap="loadmore" loading="{{loading}}">点击加载更多</button>
+</view>
+
+</view>
